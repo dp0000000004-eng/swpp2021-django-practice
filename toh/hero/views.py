@@ -32,7 +32,7 @@ def hero_info(request, id):
         hero = Hero.objects.get(id=id)
         hero.name = hero_name
         hero.age = hero_age
-        hero.save()
+        hero.save(commit=True)
         response_dict = {"id": hero.id, "name": hero.name, "age": hero.age}
         return JsonResponse(response_dict, status=200)
     else:
