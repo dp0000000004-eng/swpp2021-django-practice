@@ -24,4 +24,4 @@ class Team(models.Model):
     )
 
     def __str__(self):
-        return self.name
+        return f"Team - {self.name} Leader - {self.leader}"
